@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <style>
+        /* CSS for styling the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        main {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        .content {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tutorial</h1>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="tutorial.html">Tutorial</a>
+        <a href="quiz.html">Quiz</a>
+    </nav>
+
+    <main>
+        <h2>Tutorial on Tectonic Plates</h2>
+
+        {% for item in tutorial_data %}
+        <div class="content">
+            <h3>{{ item.label }}</h3>
+            <p>{{ item.comment }}</p>
+        </div>
+        {% endfor %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ontology Explorer</p>
+    </footer>
+</body>
+</html>
